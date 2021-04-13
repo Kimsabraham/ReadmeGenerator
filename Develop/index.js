@@ -1,6 +1,6 @@
 // imports
 const inquirer = require("inquirer");
-const generatorMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
 
 // Questions asked to the user
@@ -8,55 +8,55 @@ const questions = [
   {
     type: "input",
     message: "What is your GitHub username?",
-    name: "UserName",
+    name: "userName",
   },
   {
     type: "input",
     message: "What is your email address?",
-    name: "Email",
+    name: "email",
   },
 
   {
     type: "input",
     message: "What is the title for your project?",
-    name: "Title",
+    name: "title",
   },
   {
     type: "input",
     message: "Please give description of your project.",
-    name: "Description",
+    name: "description",
   },
   {
     type: "input",
     message: "What necessary dependencies must be installed to run this app?",
-    name: "Installation",
+    name: "installation",
   },
   {
     type: "input",
     message: "What is this app used for?",
-    name: "Usage",
+    name: "usage",
   },
   {
     type: "list",
     message: "What license was used for this README?",
-    name: "License",
-    choices: ["1", "2", "3"],
+    name: "license",
+    choices: ["Apache", "MIT", "ISC", "GNU GPLv3", "None",],
   },
 
   {
     type: "input",
     message: "Please add contributors",
-    name: "Contributor",
+    name: "contributor",
   },
   {
     type: "input",
     message: "What command do you use to test this App?",
-    name: "Test",
+    name: "test",
   },
 ];
 
 // Writing to a file
-function writeToFile(fileName, data) {
+function createFile(fileName, data) {
   fs.writeFile("./utils/generateMarkdown" + fileName, data, function (err) {
     if (err) {
       return console.log(err);
@@ -65,4 +65,12 @@ function writeToFile(fileName, data) {
   });
 }
 
+// initialization function
+function init() {
+  inquirer.prompt(questions).then(function (data) {
+    createFile("README.md", generateMarkdown(data));
+  });
+}
 
+// run the app
+init();
