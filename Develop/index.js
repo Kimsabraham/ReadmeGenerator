@@ -1,59 +1,68 @@
-// TODO: Include packages needed for this application
+// imports
 const inquirer = require("inquirer");
-const fs = require("fs"); 
-const generatorMarkdown = require("./generateMarkdown");
+const generatorMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
 
-const AsyncFile = util.promisify(fs.watchFile)
+// Questions asked to the user
+const questions = [
+  {
+    type: "input",
+    message: "What is your GitHub username?",
+    name: "UserName",
+  },
+  {
+    type: "input",
+    message: "What is your email address?",
+    name: "Email",
+  },
 
-// TODO: Create an array of questions for user input
-function AskUser (){
-    return inquirer.prompt([
-      {
-        type: "input",
-        message: "What is the name of the project?",
-        name: "title",
-      },
-      {
-        type: "input",
-        message: "Enter a description of your project.",
-        name: "description",
-      },
-      {
-        type: "input",
-        message: "What technologies need to be installed for your project?",
-        name: "installation",
-      },
-      {
-        type: "input",
-        message: "What is this App going to be used for?",
-        name: "usage",
-      },
+  {
+    type: "input",
+    message: "What is the title for your project?",
+    name: "Title",
+  },
+  {
+    type: "input",
+    message: "Please give description of your project.",
+    name: "Description",
+  },
+  {
+    type: "input",
+    message: "What necessary dependencies must be installed to run this app?",
+    name: "Installation",
+  },
+  {
+    type: "input",
+    message: "What is this app used for?",
+    name: "Usage",
+  },
+  {
+    type: "list",
+    message: "What license was used for this README?",
+    name: "License",
+    choices: ["1", "2", "3"],
+  },
 
-      {
-        type: "checkbox",
-        message: "Select a license for this project.",
-        choices: ["Apache", "GNU GPLv3", "ISC", "MIT"],
-        name: "license",
-      },
-      {
-        type: "input",
-        message: "Please list all contributors for this project.",
-        name: "contributors",
-      },
-      {
-        type: "input",
-        message: "How do you test your app?",
-        name: "test",
-      },
-    ]);
+  {
+    type: "input",
+    message: "Please add contributors",
+    name: "Contributor",
+  },
+  {
+    type: "input",
+    message: "What command do you use to test this App?",
+    name: "Test",
+  },
+];
+
+// Writing to a file
+function writeToFile(fileName, data) {
+  fs.writeFile("./utils/generateMarkdown" + fileName, data, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Successfully wrote: " + fileName);
+  });
 }
-const questions = [];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
