@@ -7,12 +7,12 @@ const fs = require("fs");
 const questions = [
   {
     type: "input",
-    message: "What is your GitHub username?",
+    message: "Please enter your Github username.",
     name: "userName",
   },
   {
     type: "input",
-    message: "What is your email address?",
+    message: "Please enter your email.",
     name: "email",
   },
 
