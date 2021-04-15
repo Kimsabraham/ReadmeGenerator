@@ -57,9 +57,9 @@ const questions = [
 
 // Writing to a file
 function createFile(fileName, data) {
-  fs.writeFile("./utils/generateMarkdown" + fileName, data, function (err) {
-    if (err) {
-      return console.log(err);
+  fs.writeFile("./utils/generateMarkdown" + fileName, data, function (error) {
+    if (error) {
+      return console.log(error);
     }
     console.log("Successfully wrote: " + fileName);
   });
