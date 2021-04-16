@@ -20,7 +20,7 @@ The following project is under MIT license.
 # Tests
 To run any test please run: node.js
 # Questions
-For any questions please contact, Kimsabraham  kimsabraham@gmail.com.
+For any questions please contact, GitHub: Kimsabraham or email:  kimsabraham@gmail.com.
 
 Video Demo: https://drive.google.com/file/d/1h1zlJxkUXF31i0vqbtGT1cjGTKvJjeDK/view (please rememebr to switch video quality to HD)
 
