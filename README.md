@@ -11,7 +11,7 @@ Github Repo: https://github.com/Kimsabraham/ReadmeGenerator
 ### Output
 
 screenshot of final product:
-![img](Develop\Capture.PNG)]
+![Capture](https://user-images.githubusercontent.com/75137165/115049799-1aba2300-9ea9-11eb-9caa-7f853f420c36.PNG)
 
 ## Contributing
 
