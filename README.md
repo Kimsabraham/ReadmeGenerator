@@ -11,7 +11,7 @@ Github Repo: https://github.com/Kimsabraham/ReadmeGenerator
 ### Output
 
 screenshot of final product:
-[![MyFinalForm](./Develop\Capture.PNG)]
+![img](/Develop\Capture.PNG)]
 
 ## Contributing
 
