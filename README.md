@@ -8,6 +8,9 @@ Video Demo: https://drive.google.com/file/d/1h1zlJxkUXF31i0vqbtGT1cjGTKvJjeDK/vi
 
 Github Repo: https://github.com/Kimsabraham/ReadmeGenerator
 
+## Dependencies
+Node.js, FS, and inquirer
+
 ### Output
 
 screenshot of final product:
