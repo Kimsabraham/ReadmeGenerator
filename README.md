@@ -1,5 +1,5 @@
 # 09 Professional README Generator
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
