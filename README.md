@@ -1,4 +1,5 @@
 # 09 Professional README Generator
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
@@ -14,7 +15,7 @@ Node.js, FS, and inquirer
 ### Output
 
 screenshot of final product:
-[![MyFinalForm](./Develop\Capture.PNG)]
+![Capture](https://user-images.githubusercontent.com/75137165/115049799-1aba2300-9ea9-11eb-9caa-7f853f420c36.PNG)
 
 ## Contributing
 
