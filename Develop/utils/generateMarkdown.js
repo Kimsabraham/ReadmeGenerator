@@ -23,7 +23,7 @@ The following project is under ${data.license} license.
 # Tests
 To run any test please run: ${data.test}
 # Questions
-For any questions please contact, ${data.userName}  ${data.email}.
+For any questions please contact, Github: ${data.userName} or email:  ${data.email}.
 `;
 }
 
